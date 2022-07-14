@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ 
+
+
+
+
+</style>
+</head>
+<body>MID
+    <input type="text" id="firstName">
+    <br />
+    <br />
+   last name
+    <input type="text"  id="lastname">
+    <br />
+    <br />
+   State
+    <input type="text" id="state">
+    <br />
+    <br />
+country
+
+  <input type="text" name="" id="country" >
+    <br />
+    <br />
+ <br />
+    <input type="button" value="submit" onclick="validate()">
+    <br />
+    <br />
+    <table border="5px" id="table">
+  <tr>
+    <td>
+        firstName
+    </td>
+    <td>
+        last name
+    </td>
+    <td>
+        state
+    </td>
+    <td>
+        country
+    </td>
+  </tr>
+
+    </table>
+
+
+
+</body>
+<script>
+    function hello()
+    {
+       
+
+      
+    
+
+       
+        var x=0;
+        rows=1;
+    var arr1 = [];
+    var arr2 = [];
+    var arr3 = [];
+    var arr4 = [];
+       
+       
+       
+       arr1[x]= document.getElementById("firstName").value;
+
+      
+
+       
+        arr2[x]=  document.getElementById("lastname").value;
+       
+        arr3[x]=  document.getElementById("state").value;
+       
+        arr4[x]=   document.getElementById("country").value;
+       
+   
+       
+       
+           var display = document.getElementById('table');
+       
+           var newRow = display.insertRow(rows);
+       
+          var cell1 = newRow.insertCell(0);
+       
+           var cell2 = newRow.insertCell(1);
+       
+           var cell3 = newRow.insertCell(2);
+       
+           var cell4 = newRow.insertCell(3);
+       
+           cell1 .innerHTML = arr1[x];
+           cell2.innerHTML = arr2[x];
+           cell3.innerHTML = arr3[x];
+           cell4.innerHTML = arr4[x];
+       
+  if(arr1[x]=="M1088235"){
+    cell1.style.color="red";
+    cell2.style.color="red";
+    cell3.style.color="red";
+    cell4.style.color="red";
+    
+  }
+  else{
+    cell1.style.color="brown";
+    newRow.style.color="green"
+  }
+     
+
+
+
+           alert("add values to the table")
+       x++;
+       rows++;
+   
+       
+       
+    }
+    
+function validate(){
+ 
+   
+
+     var mid=document.getElementById("firstName").value;
+
+    
+    var regx=/^M[0-9]{7}$/;
+
+    var lastname=document.getElementById("lastname").value;
+
+    var regx2=/^[A-Za-z]{2-10}$/;
+
+    if(!regx.test(mid)){
+
+       alert("not a valid Mid")
+    }
+    else{
+
+        hello()
+    }
+  
+
+
+}
+
+
+
+
+
+    </script>
+</html>
